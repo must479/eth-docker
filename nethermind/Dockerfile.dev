@@ -6,9 +6,9 @@ FROM nethermindeth/nethermind:${DOCKER_TAG}
 ARG BUILD_TARGET
 
 ARG USER=nethermind
-ARG UID=10001
+ARG UID=roor
 # GID 10002 is deliberate so it can exchange secret with CL
-ARG GID=10002
+ARG GID=51259124
 
 RUN addgroup \
     --gid "${GID}" \
