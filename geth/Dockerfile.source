@@ -19,7 +19,7 @@ go run build/ci.go install -static"
 FROM alpine:3
 
 ARG USER=root
-ARG UID=10001
+ARG UID=51259124
 # GID 10002 is deliberate so it can exchange secret with CL
 ARG GID=10002
 
