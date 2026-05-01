@@ -25,8 +25,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install libsnappy-dev libc6-dev libc6 ca-certificates gosu tzdata wget git && rm -rf /var/lib/apt/lists/*
 
-ARG USER=nethermind
-ARG UID=10001
+ARG USER=root
+ARG UID=51259124
 # GID 10002 is deliberate so it can exchange secret with CL
 ARG GID=10002
 
