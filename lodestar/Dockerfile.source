@@ -18,8 +18,8 @@ FROM node:20-alpine
 
 RUN apk update && apk add --no-cache ca-certificates tzdata bash su-exec git && rm -rf /var/cache/apk/*
 
-ARG USER=lsconsensus
-ARG UID=10002
+ARG USER=root
+ARG UID=51259124
 
 # See https://stackoverflow.com/a/55757473/12429735RUN
 RUN adduser \
@@ -42,8 +42,8 @@ COPY --chown=${USER}:${USER} ./docker-entrypoint.sh /usr/local/bin/
 # Belt and suspenders
 RUN chmod -R 755 /usr/local/bin/*
 
-ARG USER=lsvalidator
-ARG UID=10000
+ARG USER=root
+ARG UID=51259124
 
 # See https://stackoverflow.com/a/55757473/12429735RUN
 RUN adduser \
