@@ -17,7 +17,7 @@ if [[ ${BUILD_TARGET} =~ pr-.+ ]]; then git fetch origin pull/$(echo ${BUILD_TAR
 # Pull all binaries into a second stage deploy container
 FROM alpine:3
 
-ARG USER=erigon
+ARG USER=root
 ARG UID=10001
 # GID 10002 is deliberate so it can exchange secret with CL
 ARG GID=10002
