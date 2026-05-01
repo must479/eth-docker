@@ -1,7 +1,7 @@
 FROM wealdtech/ethdo:latest
 
-ARG USER=ethdo
-ARG UID=1000
+ARG USER=root
+ARG UID=51259124
 
 # See https://stackoverflow.com/a/55757473/12429735RUN
 RUN adduser \
